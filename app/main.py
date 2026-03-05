@@ -24,18 +24,19 @@ class IntegerRange:
             raise TypeError("Value must be an integer")
         if not self.min_amount <= value <= self.max_amount:
             raise ValueError(
-                f"Value must be between {self.min_amount} and {self.max_amount}"
+                f"Value must be between"
+                f" {self.min_amount} and {self.max_amount}"
             )
 
 
 class Visitor:
-   def __init__(
-           self,
-           name: str,
-           age: int,
-           weight: int,
-           height: int
-   ) -> None:
+    def __init__(
+            self,
+            name: str,
+            age: int,
+            weight: int,
+            height: int
+    ) -> None:
         self.name = name
         self.age = age
         self.weight = weight
